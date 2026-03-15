@@ -1,3 +1,4 @@
+#include <filesystem>
 #include <iostream>
 using namespace std;
 
@@ -7,7 +8,8 @@ int main() {
     string input;
 
     while (true) {
-        cout << "> ";
+        string current_path = filesystem::current_path();
+        cout << "~ " << current_path.substr(current_path.find_last_of("/") + 1) << " >> ";
         cin >> input;
         cout << "You have select: " << input << "\n";
         if (input == "exit") {

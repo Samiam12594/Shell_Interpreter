@@ -6,6 +6,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN g++ -o shell main.cpp
+RUN g++ -std=c++20 -o shell main.cpp
 
 CMD ["./shell"]
